@@ -1,0 +1,108 @@
+/* Scroll reveal and micro-interaction animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+        opacity 0.55s var(--ease-out),
+        transform 0.55s var(--ease-out);
+}
+
+.reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-d1 {
+    transition-delay: 80ms;
+}
+
+.reveal-d2 {
+    transition-delay: 160ms;
+}
+
+.reveal-d3 {
+    transition-delay: 240ms;
+}
+
+.reveal-d4 {
+    transition-delay: 320ms;
+}
+
+.reveal-fade {
+    opacity: 0;
+    transition: opacity 0.55s var(--ease-out);
+}
+
+.reveal-fade.in-view {
+    opacity: 1;
+}
+
+
+
+.hover-lift {
+    transition: transform var(--duration) var(--ease-out);
+}
+
+.hover-lift:hover {
+    transform: translateY(-3px);
+}
+
+
+.link-slide {
+    position: relative;
+    display: inline-block;
+}
+
+.link-slide::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 1px;
+    background: var(--pw);
+    transition: width var(--duration) var(--ease-out);
+}
+
+.link-slide:hover::after,
+.link-slide:focus::after {
+    width: 100%;
+}
+
+@keyframes shimmer {
+    from {
+        background-position: -400px 0;
+    }
+
+    to {
+        background-position: 400px 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(90deg,
+            var(--surface) 25%,
+            var(--surface-2) 50%,
+            var(--surface) 75%);
+    background-size: 400px 100%;
+    animation: shimmer 1.5s ease infinite;
+}
+
+
+
+.cursor-glow {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    pointer-events: none;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--pw-glow) 0%, transparent 65%);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+body:hover .cursor-glow {
+    opacity: 1;
+}

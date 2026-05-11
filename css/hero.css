@@ -1,0 +1,350 @@
+/* ============================================================
+   HERO.CSS — Hero section, avatar, animations
+   ============================================================ */
+
+
+/* Hero section, background, and avatar styling */
+.bg-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+
+.bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 48px 48px;
+    opacity: 0.25;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+}
+
+
+.bg-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.5;
+}
+
+.bg-blob-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(139, 159, 232, 0.07) 0%, transparent 70%);
+    top: -150px;
+    right: -100px;
+}
+
+.bg-blob-2 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(139, 159, 232, 0.05) 0%, transparent 70%);
+    bottom: 30%;
+    left: -80px;
+}
+
+
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: calc(var(--nav-height) + 28px) 0 72px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .container {
+    width: 100%;
+    max-width: none;
+    padding: 0 var(--content-pad);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 64px;
+    align-items: center;
+    width: 100%;
+}
+
+
+.hero-eyebrow {
+    margin-bottom: 28px;
+}
+
+.hero-heading {
+    margin-bottom: 20px;
+    font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+    font-weight: 500;
+}
+
+.hero-heading em {
+    font-style: italic;
+    color: var(--pw);
+}
+
+.hero-body {
+    max-width: 520px;
+    margin-bottom: 36px;
+}
+
+.hero-body strong {
+    color: var(--text-0);
+    font-weight: 600;
+}
+
+
+.hero-rotate-wrap {
+    display: inline-flex;
+    overflow: hidden;
+    height: 1.4em;
+    vertical-align: bottom;
+}
+
+.hero-rotate-inner {
+    animation: hero-rotate 7.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.hero-rotate-inner span {
+    display: block;
+    color: var(--pw);
+    font-weight: 700;
+}
+
+@keyframes hero-rotate {
+
+    0%,
+    20% {
+        transform: translateY(0%);
+    }
+
+    28%,
+    48% {
+        transform: translateY(-33.3%);
+    }
+
+    56%,
+    76% {
+        transform: translateY(-66.6%);
+    }
+
+    84%,
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+.hero-ctas {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 44px;
+}
+
+
+.hero-avatar-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+}
+
+.avatar-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.avatar-spin {
+    position: absolute;
+    inset: -15px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg,
+            transparent 0%,
+            transparent 60%,
+            var(--pw-border) 70%,
+            var(--pw) 80%,
+            transparent 90%,
+            transparent 100%);
+    animation: spin-slow 8s linear infinite;
+    mask: radial-gradient(farthest-side, transparent calc(100% - 1.5px), black 100%);
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 1.5px), black 100%);
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.avatar-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5.5rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.avatar-glow {
+    position: absolute;
+    inset: -25px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--pw-glow) 0%, transparent 70%);
+    z-index: 0;
+    animation: glow-breathe 4s ease-in-out infinite;
+}
+
+@keyframes glow-breathe {
+
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+}
+
+
+.avatar-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    padding: 5px 14px 5px 10px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-1);
+    white-space: nowrap;
+}
+
+.avatar-status .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #3fb950;
+    
+    box-shadow: 0 0 6px rgba(63, 185, 80, 0.5);
+    animation: status-pulse 2.5s ease infinite;
+    flex-shrink: 0;
+}
+
+@keyframes status-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 4px rgba(63, 185, 80, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 10px rgba(63, 185, 80, 0.8);
+    }
+}
+
+
+.hero-eyebrow,
+.hero-heading,
+.hero-body,
+.hero-ctas,
+.hero-stats,
+.hero-avatar-area {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: entrance var(--duration-lg) var(--ease-out) forwards;
+}
+
+.hero-eyebrow {
+    animation-delay: 60ms;
+}
+
+.hero-heading {
+    animation-delay: 140ms;
+}
+
+.hero-body {
+    animation-delay: 200ms;
+}
+
+.hero-ctas {
+    animation-delay: 260ms;
+}
+
+.hero-stats {
+    animation-delay: 320ms;
+}
+
+.hero-avatar-area {
+    animation-delay: 80ms;
+}
+
+@keyframes entrance {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-avatar-area {
+        order: -1;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .avatar-container {
+        width: 140px;
+        height: 140px;
+    }
+
+    .avatar-img {
+        width: 140px;
+        height: 140px;
+        font-size: 3.8rem;
+    }
+
+    .avatar-spin {
+        inset: -10px;
+    }
+
+    .hero-ctas .btn {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        padding-top: calc(var(--nav-height) + 32px);
+    }
+}

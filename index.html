@@ -1,0 +1,515 @@
+<!-- Portfolio website entry point -->
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Diya Bogati — Full Stack Software Engineer at Canonical. Portfolio of projects, experience, and skills." />
+    <meta name="author" content="Diya Bogati" />
+
+    <meta property="og:title" content="Diya Bogati" />
+    <meta property="og:description" content="Computer Engineer. Portfolio of projects, experience, and skills." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.anu18.com/" />
+
+    <title>Diya Bogati - Computer Engineer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/components.css" />
+</head>
+
+<body>
+
+    <div class="bg-canvas" aria-hidden="true">
+        <div class="bg-grid"></div>
+        <div class="bg-blob bg-blob-1"></div>
+        <div class="bg-blob bg-blob-2"></div>
+    </div>
+
+
+    <header>
+        <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-inner">
+
+                <a href="#home" class="nav-logo" aria-label="Diya Bogati — Home">
+                    <span class="logo-bracket">[</span>
+                    Diya
+                    <span class="logo-bracket">]</span>
+                </a>
+
+                <ul class="nav-links" role="list">
+                    <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                    <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+                    <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                    <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                    <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-right">
+                    <button class="icon-btn" id="themeToggle" aria-label="Switch to light mode" title="Toggle theme">
+                    </button>
+                    <a href="assets/documents/diya_resume.pdf" target="_blank" class="btn btn-ghost"
+                        style="font-size: 0.75rem; padding: 4px 8px;" title="Download resume">
+                        Download CV
+                    </a>
+                    <button class="icon-btn hamburger" id="hamburger" aria-label="Open navigation menu"
+                        aria-expanded="false" aria-controls="mobileMenu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <line x1="3" y1="12" x2="21" y2="12" />
+                            <line x1="3" y1="18" x2="21" y2="18" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </nav>
+
+        <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-grid">
+
+                    <div class="hero-text">
+
+                        <div class="hero-eyebrow">
+                            <span class="badge badge-pw">
+                                <span class="badge-dot"></span>
+                                Open to opportunities
+                            </span>
+                        </div>
+
+                        <h1 class="t-display hero-heading">
+                            Diya <span style="color: var(--pw);">Bogati</span>
+                        </h1>
+
+                        <p class="t-body hero-body">
+                            I’m Diya Bogati, a passionate Full Stack Developer from Nepal. I spend my free time watching
+                            series, anime, listening to music, and exploring new tech trends. On some weekends, you’ll
+                            probably find me binge-watching my favorite shows with snacks and coffee.
+                        </p>
+
+                        <div class="hero-ctas">
+                            <a href="assets/documents/diya_resume.pdf" target="_blank" rel="noreferrer" class="btn btn-primary">
+                                Download CV
+                            </a>
+                            <a href="https://linkedin.com/in/diyabogati" target="_blank" rel="noreferrer"
+                                class="btn btn-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com/diyabogati1" target="_blank" rel="noreferrer"
+                                class="btn btn-ghost">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.475 2 2 6.47 2 11.988c0 4.42 2.862 8.153 6.838 9.476.5.087.687-.212.687-.474 0-.238-.013-1.024-.013-1.86C7 19.59 6.35 18.517 6.15 17.955c-.113-.287-.6-1.174-1.025-1.411-.35-.187-.85-.65-.013-.662.788-.012 1.35.724 1.538 1.024.9 1.51 2.338 1.086 2.912.824.088-.65.35-1.086.638-1.336-2.225-.25-4.55-1.111-4.55-4.931 0-1.087.387-1.986 1.025-2.685-.1-.25-.45-1.273.1-2.646 0 0 .837-.263 2.75 1.023a9.29 9.29 0 0 1 2.5-.337c.85 0 1.7.113 2.5.337 1.912-1.298 2.75-1.023 2.75-1.023.55 1.373.2 2.397.1 2.646.637.7 1.025 1.586 1.025 2.685 0 3.832-2.337 4.681-4.562 4.931.362.312.675.912.675 1.848 0 1.336-.013 2.41-.013 2.747 0 .262.188.574.688.474C19.137 20.141 22 16.395 22 11.988 22 6.47 17.525 2 12 2Z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="hero-avatar-area">
+                        <div class="avatar-container">
+                            <div class="avatar-glow" aria-hidden="true"></div>
+                            <div class="avatar-spin" aria-hidden="true"></div>
+                            <div class="avatar-img" role="img" aria-label="Diya Bogati avatar">
+                                <img src="assets/images/profile.jpeg" alt="Diya Bogati avatar"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section" id="about">
+            <div class="container">
+                <div class="divider"></div>
+                <div style="padding-top: 64px;">
+
+                    <header class="section-header about-header">
+                        <h2 class="t-display reveal reveal-d1">
+                            About Me
+                        </h2>
+                    </header>
+                    <p class="t-body section-desc about-copy reveal reveal-d2">
+                        I’m <strong>Diya Bogati</strong>, a driven Computer Engineering professional and <strong>Full
+                            Stack Software Engineer</strong> from Nepal. I specialize in creating modern, responsive,
+                        and user-centric web applications that blend elegant design with practical, real-world
+                        functionality. From enterprise management tools to intelligent AI-driven experiences, I focus on
+                        transforming complex ideas into meaningful digital solutions.
+                    </p>
+                    <p class="t-body section-desc about-copy reveal reveal-d2">
+                        Outside of development, I stay engaged with emerging technologies, UI/UX innovation, and
+                        collaborative problem solving. I enjoy refining my skills through experimental projects,
+                        continuous learning, and thoughtful design exploration. Whether I’m building a new feature,
+                        optimizing a workflow, or planning the next professional challenge, my goal is always to deliver
+                        polished, impactful work.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section" id="education">
+            <div class="container">
+                <div class="divider"></div>
+                <div style="padding-top: 64px;">
+
+                    <header class="section-header">
+                        <h2 class="t-display reveal reveal-d1">Education</h2>
+                    </header>
+
+                    <ol class="timeline" reversed>
+
+                        <li class="timeline-item reveal">
+                            <div class="tl-icon" aria-hidden="true">
+                                <img src="assets/images/nast-logo.png" alt="Logo">
+                            </div>
+                            <div class="tl-body">
+                                <div class="tl-top">
+                                    <span class="tl-company">National Academy of Science and Technology (NAST)</span>
+                                    <span class="period-chip">2022 — Present</span>
+                                </div>
+                                <p class="tl-role">BE Computer Engineering</p>
+                                <p class="tl-desc">
+                                    Focused on software development, data structures, algorithms, and project-based
+                                    learning.
+                                </p>
+                                <div class="tags">
+                                    <span class="tag">Computer Engineering</span>
+                                    <span class="tag">Algorithms</span>
+                                    <span class="tag">Software Development</span>
+                                    <span class="tag">Project Learning</span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item reveal reveal-d1">
+                            <div class="tl-icon" aria-hidden="true">
+                                <img src="assets/images/galaxy-logo.png" alt="Logo">
+
+                            </div>
+                            <div class="tl-body">
+                                <div class="tl-top">
+                                    <span class="tl-company">Galaxy Secondary School</span>
+                                    <span class="period-chip">2020 — 2022</span>
+                                </div>
+                                <p class="tl-role">+2 Science</p>
+                                <p class="tl-desc">
+                                    Completed foundational studies in physics, chemistry, and mathematics.
+                                </p>
+                                <div class="tags">
+                                    <span class="tag">Physics</span>
+                                    <span class="tag">Chemistry</span>
+                                    <span class="tag">Mathematics</span>
+                                    <span class="tag">Science</span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item reveal reveal-d2">
+                            <div class="tl-icon" aria-hidden="true">
+                                <img src="assets/images/glee-logo.png" alt="Logo">
+                            </div>
+                            <div class="tl-body">
+                                <div class="tl-top">
+                                    <span class="tl-company">Glee Academy School</span>
+                                    <span class="period-chip">2018 — 2020</span>
+                                </div>
+                                <p class="tl-role">Secondary Education (SEE)</p>
+                                <p class="tl-desc">
+                                    Completed secondary-level education under the national curriculum.
+                                </p>
+                                <div class="tags">
+                                    <span class="tag">Secondary Education</span>
+                                    <span class="tag">National Curriculum</span>
+                                    <span class="tag">Academic Foundation</span>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="divider"></div>
+                <div style="padding-top: 64px;">
+
+                    <header class="section-header section-hero-header">
+                        <h2 class="t-display reveal reveal-d1">Projects</h2>
+                    </header>
+
+                    <div class="projects-grid">
+
+                        <article class="card card-interactive project-card reveal">
+                            <figure class="project-thumb" aria-label="Task Management Tool preview">
+                                <img src="assets/images/tasky-tool.png" alt="Task Management Tool Thumbnail" class="project-thumb-img">
+                            </figure>
+                            <p class="project-num">01</p>
+                            <h3 class="project-name">Task Management Tool</h3>
+                            <p class="project-desc">
+                                Built a full-stack task management solution for academic use, combining
+                                React.js frontend interactivity with Python Flask APIs and SQLite/MySQL
+                                backend support for secure task tracking and collaboration.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">React.js</span>
+                                <span class="tag">Python Flask</span>
+                                <span class="tag">SQLite</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">REST API</span>
+                            </div>
+                            <footer class="project-footer">
+                                <a href="https://github.com/diyabogati1" target="_blank" class="project-arrow" aria-label="View Task Management Tool project">
+                                    View project
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                                        <path d="M7 17L17 7M7 7h10v10" />
+                                    </svg>
+                                </a>
+                            </footer>
+                        </article>
+
+                        <article class="card card-interactive project-card reveal reveal-d1">
+                            <figure class="project-thumb" aria-label="Portfolio site preview">
+                                <img src="assets/images/my-portfolio.png" alt="Portfolio Website Thumbnail"
+                                    class="project-thumb-img">
+
+                                <div class="project-thumb-copy">
+                                    <p class="project-thumb-label">Portfolio Website</p>
+                                </div>
+                            </figure>
+                            <p class="project-num">02</p>
+                            <h3 class="project-name">Portfolio Website</h3>
+                            <p class="project-desc">
+                                Built this portfolio site with responsive HTML, CSS, and JavaScript to
+                                showcase projects, skills, and professional experience in a clean,
+                                modern layout optimized for desktop and mobile users.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Responsive</span>
+                                <span class="tag">UI Design</span>
+                            </div>
+                            <footer class="project-footer">
+                                <a href="#" class="project-arrow" aria-label="View Portfolio Website project">
+                                    View project
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                                        <path d="M7 17L17 7M7 7h10v10" />
+                                    </svg>
+                                </a>
+                            </footer>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="divider"></div>
+                <div style="padding-top: 64px;">
+
+                    <header class="section-header">
+                        <h2 class="t-display reveal reveal-d1">Skills</h2>
+                    </header>
+                    <div class="skills-grid">
+
+                        <div class="card skill-group reveal">
+                            <p class="skill-group-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                                    <path d="M3 9h18M9 21V9" />
+                                </svg>
+                                Frontend Development
+                            </p>
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">React.js</span>
+                            </div>
+                        </div>
+
+                        <div class="card skill-group reveal reveal-d1">
+                            <p class="skill-group-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6" />
+                                    <polyline points="8 6 2 12 8 18" />
+                                </svg>
+                                Backend & APIs
+                            </p>
+                            <div class="tags">
+                                <span class="tag">Python Flask</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">REST API</span>
+                            </div>
+                        </div>
+
+                        <div class="card skill-group reveal reveal-d2">
+                            <p class="skill-group-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                                </svg>
+                                Data & Storage
+                            </p>
+                            <div class="tags">
+                                <span class="tag">MySQL</span>
+                                <span class="tag">SQLite</span>
+                                <span class="tag">Database Design</span>
+                            </div>
+                        </div>
+
+                        <div class="card skill-group reveal reveal-d3">
+                            <p class="skill-group-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14" />
+                                </svg>
+                                Tools & Workflow
+                            </p>
+                            <div class="tags">
+                                <span class="tag">Git</span>
+                                <span class="tag">GitHub</span>
+                                <span class="tag">Developer Workflow</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        </section>
+
+
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="divider"></div>
+                <div style="padding-top: 64px; padding-bottom: 8px;">
+
+                    <div class="contact-block reveal">
+                        <header class="section-header">
+                            <h2 class="t-display contact-heading" style="text-align:center;">
+                                Contact
+                            </h2>
+                        </header>
+                        <p class="t-body" style="text-align:center; margin: 0 auto; margin-bottom: 32px;">
+                            Whether it's a role, a collaboration, or just a hello my inbox is always open.
+                        </p>
+
+                        <div class="contact-links">
+
+                            <a href="mailto:bogatidiya36@gmail.com" class="btn btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                                Send an email
+                            </a>
+                            <a href="https://linkedin.com/in/diyabogati" target="_blank" rel="noreferrer"
+                                class="btn btn-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com/diyabogati1" target="_blank" rel="noreferrer"
+                                class="btn btn-ghost">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.475 2 2 6.47 2 11.988c0 4.42 2.862 8.153 6.838 9.476.5.087.687-.212.687-.474 0-.238-.013-1.024-.013-1.86C7 19.59 6.35 18.517 6.15 17.955c-.113-.287-.6-1.174-1.025-1.411-.35-.187-.85-.65-.013-.662.788-.012 1.35.724 1.538 1.024.9 1.51 2.338 1.086 2.912.824.088-.65.35-1.086.638-1.336-2.225-.25-4.55-1.111-4.55-4.931 0-1.087.387-1.986 1.025-2.685-.1-.25-.45-1.273.1-2.646 0 0 .837-.263 2.75 1.023a9.29 9.29 0 0 1 2.5-.337c.85 0 1.7.113 2.5.337 1.912-1.298 2.75-1.023 2.75-1.023.55 1.373.2 2.397.1 2.646.637.7 1.025 1.586 1.025 2.685 0 3.832-2.337 4.681-4.562 4.931.362.312.675.912.675 1.848 0 1.336-.013 2.41-.013 2.747 0 .262.188.574.688.474C19.137 20.141 22 16.395 22 11.988 22 6.47 17.525 2 12 2Z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p class="footer-copy">
+                &copy; 2026 <span>Diya Bogati</span>
+            </p>
+        </div>
+    </footer>
+
+    <button class="scroll-top-btn" id="scrollTopBtn" type="button" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M6 15l6-6 6 6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <script type="module" src="js/main.js"></script>
+
+    <script nomodule>
+        (function () {
+            var t = localStorage.getItem('ac-portfolio-theme') ||
+                (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+
+</body>
+
+</html>

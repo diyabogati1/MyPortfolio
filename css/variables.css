@@ -1,0 +1,87 @@
+/* Design tokens and CSS custom properties */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root,
+[data-theme="dark"] {
+    --bg-0: #000000;
+    --bg-1: #0d1117;
+    --bg-2: #161b22;
+    --bg-3: #1c2128;
+    --surface: #21262d;
+    --surface-2: #2d333b;
+    --border: #30363d;
+    --border-2: #484f58;
+
+    --pw: #8b9fe8;
+    --pw-2: #b3c0f0;
+    --pw-3: #6474cc;
+    --pw-dim: rgba(139, 159, 232, 0.10);
+    --pw-glow: rgba(139, 159, 232, 0.20);
+    --pw-border: rgba(139, 159, 232, 0.28);
+
+    --text-0: #e6edf3;
+    --text-1: #8d96a0;
+    --text-2: #545d68;
+    --text-inv: #0d1117;
+
+    --code-bg: #161b22;
+    --code-text: #79c0ff;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.6);
+    --shadow-pw: 0 4px 24px rgba(139, 159, 232, 0.18);
+}
+
+[data-theme="light"] {
+    --bg-0: #ffffff;
+    --bg-1: #f6f8fa;
+    /* GitHub light canvas */
+    --bg-2: #eaeef2;
+    --bg-3: #e1e8f0;
+    --surface: #ffffff;
+    --surface-2: #f6f8fa;
+    --border: #d0d7de;
+    --border-2: #afb8c1;
+
+    --pw: #5a6fc2;
+    --pw-2: #8b9fe8;
+    --pw-3: #3d52b0;
+    --pw-dim: rgba(90, 111, 194, 0.08);
+    --pw-glow: rgba(90, 111, 194, 0.16);
+    --pw-border: rgba(90, 111, 194, 0.24);
+
+    --text-0: #1f2328;
+    --text-1: #57606a;
+    --text-2: #8c959f;
+    --text-inv: #ffffff;
+
+    --code-bg: #f6f8fa;
+    --code-text: #0550ae;
+
+    --shadow-sm: 0 1px 3px rgba(31, 35, 40, 0.08);
+    --shadow-md: 0 4px 16px rgba(31, 35, 40, 0.10);
+    --shadow-lg: 0 12px 40px rgba(31, 35, 40, 0.12);
+    --shadow-pw: 0 4px 24px rgba(90, 111, 194, 0.14);
+}
+
+:root {
+    --font-display: 'Inter', 'Segoe UI', sans-serif;
+    --font-body: 'Inter', 'Segoe UI', sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 20px;
+    --radius-full: 9999px;
+
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration: 220ms;
+    --duration-lg: 400ms;
+
+    --nav-height: 62px;
+    --max-width: 1600px;
+    --content-pad: 220px;
+}
